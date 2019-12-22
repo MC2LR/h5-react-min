@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>上汽通用金融客服</title>
+    <script>
+      function onBridgeReady() {
+        // 隐藏底部导航栏
+        WeixinJSBridge.call('hideToolbar')
+        // 隐藏右上角按钮
+        WeixinJSBridge.call('hideOptionMenu')
+      }
+      if (typeof WeixinJSBridge === 'undefined') {
+        if (document.addEventListener) {
+          document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false)
+        } else if (document.attachEvent) {
+          document.attachEvent('WeixinJSBridgeReady', onBridgeReady)
+          document.attachEvent('onWeixinJSBridgeReady', onBridgeReady)
+        }
+      } else {
+        onBridgeReady()
+      }
+
+    //   pushHistory(); 
+    //   window.addEventListener("popstate", function(e) {  //回调函数中实现需要的功能
+    //     alert("我监听到了浏览器的返回按钮事件啦");
+    //   }, false);
+
+    //   function pushHistory() {
+		//     var state = {
+		//         title: "",
+		//         url: ""
+		//     };
+		//     window.history.pushState(state, state.title, state.url);
+		//   }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .skeleton {
+        height: 100vh;
+        box-sizing: border-box;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+      .skeleton > .title {
+        background: #f2f2f2;
+        width: 40%;
+        height: 20px;
+        margin: 10px 0px;
+      }
+      .skeleton > .item {
+        background: #f2f2f2;
+        width: 90%;
+        height: 20px;
+        margin: 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="skeleton">
+        <div class="title"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="title"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="title"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+    <!-- 调试用移动端控制台 -->
+    <script src="./vconsole.min.js"></script>
+    <script>
+      var vConsole = new VConsole()
+    </script>
+  </body>
+</html>

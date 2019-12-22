@@ -1,0 +1,58 @@
+.modal
+  position: fixed
+  z-index: 100
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  font-size: $font-size-middle
+  background: rgba(0, 0, 0, 0.5)
+  .menu
+    padding: 160px 36px 0 36px
+    .public
+      width: 100%
+      height: $modal-item-height
+      margin: 30px 0
+      border-radius: 16px
+    .item
+      @extend .public
+      line-height: 120px
+      background: #fff
+    ul
+      width: 90%
+      margin: 0 auto
+      li
+        width: fit-content
+        float: left
+        &:first-child
+          width: 25%
+          margin-right: 20px
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+        &:last-child
+          width: 70%
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+    .bind-new
+      @extend .public
+      background: $primary-color
+      text-align: center
+      color: #fff
+      .title
+        height: 50px
+        line-height: 50px
+        font-size: 32px
+        .icon
+          position: relative
+          font-size: 60px
+          top: 7px
+      .sub-title
+        height: 40px
+        font-size: 24px
+        margin-top: 5px
+        .number
+          font-size: 28px
+          color: #F3A21A
+          padding: 0 7px

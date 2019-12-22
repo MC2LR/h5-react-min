@@ -1,0 +1,192 @@
+/*
+ * sass公共样式文件
+ */
+body
+  font-size: $font-size-base !important
+  color: #1A1A1A
+
+// 修正Picker样式
+.am-picker-col-content
+  .am-picker-col-item
+    font-size: $font-size-primary
+.am-toast
+  & > span
+    max-width: 70% !important
+  & .am-toast-notice-content .am-toast-text
+    padding: 25px 40px
+
+.cover
+  position: absolute
+  top: 0
+.view
+  min-height: 100vh
+  background: #fff
+  // 自定义蚂蚁框架样式
+  .am-list-item
+    // 清除Picker左填充
+    padding-left: 0px
+    &.am-input-item
+      // 清除input左填充
+      padding-left: 0px
+    .am-list-line
+      // 清除input右填充
+      padding-right: 0px
+      &::after
+        background: none !important
+      .am-list-content
+        // Picker字体大小
+        font-size: $font-size-primary
+      .am-list-extra
+        // extra字体大小
+        font-size: $font-size-primary
+      .am-list-arrow-horizontal
+        margin-left: 10px
+        width: 25px
+        height: 25px
+    .am-input-label
+      // label字体大小
+      font-size: $font-size-primary
+      &.am-input-label-5
+        width: fit-content
+        margin-right: 0px
+    .am-input-control
+      .fake-input-placeholder,
+      input
+        // input字体大小
+        font-size: $font-size-primary
+    .am-input-extra
+      font-size: $font-size-primary
+
+  // input文字右对齐
+  .right-input
+    input
+      text-align: right
+
+  // 自定义表单样式
+  .my-am-input
+    position: relative
+    // 划线
+    .line
+      position: absolute
+      bottom: 0
+      width: 100%
+      z-index: 1
+      border-top: $border-width-base solid #E6E6E6
+      transition: all 0.5s
+    // 划线-点击div激活
+    &:focus>.line
+      border-top: $border-width-base solid $primary-color
+    // 划线-点击input激活
+    .am-list-item.am-input-focus.am-input-item.am-list-item-middle
+      &~.line
+        border-top: $border-width-base solid $primary-color
+    // 划线-错误
+    .err-line
+      border-top: $border-width-base solid red
+
+  // 分隔线
+  hr
+    border-top: $border-width-base dashed $grey-9
+
+  // 提交按钮
+  .submit-btn
+    display: block
+    width: 600px
+    height: 100px
+    margin: 0 auto
+    background: $primary-color
+    border-radius: 4px
+    color: #FFFFFF
+    font-size: 32px
+  .disable-btn
+    background: #ccc
+
+  // 错误信息
+  .error-message
+    padding-top: 20px
+    height: 40px
+    line-height: 40px
+    color: $error-color-1
+
+  // 验证码
+  .security-code
+    position: absolute
+    bottom: 5px
+    right: 0px
+    width: 208px
+    height: 96px
+    text-align: center
+
+  // 提示
+  .prompt
+    margin-top: 30px
+  .prompt-grey
+    color: $prompt-color-grey
+    @extend .prompt
+  .prompt-orange
+    color: $prompt-color-orange
+    @extend .prompt
+
+  // 合同信息
+  .contract-info
+    padding-top: 25px
+    font-size: $font-size-primary
+    .contract-info-height
+      height: 72px
+      line-height: 72px
+    .contract-info-name
+      display: inline-block
+      padding-right: 20px
+      @extend .contract-info-height
+    .contract-info-value
+      display: inline-block
+      @extend .contract-info-height
+
+  // 提前还款相关信息
+  $cardPaddingLeft: 30px
+  .remit-card
+    width: 100%
+    margin-top: 60px
+    box-sizing: border-box
+    border: $border-width-base solid #EDEDED
+    font-size: $font-size-primary
+    .title
+      height: 100px
+      line-height: 100px
+      padding-left: $cardPaddingLeft
+      background: #F5F5F5
+    ul
+      font-size: $font-size-middle
+      padding: 20px 0
+      &:first-child
+        padding-left: $cardPaddingLeft
+      li
+        height: 70px
+        line-height: 70px
+    .info-name
+      width: fit-content
+      padding-right: 30px
+    .pmt
+      margin-top: 0
+      font-size: $font-size-base
+      padding: 0 $cardPaddingLeft 30px $cardPaddingLeft
+  .prepayment-success
+    text-align: center
+    padding-top: 30px
+    .apply-success
+      width: 100px
+      height: 100px
+    .success-message
+      margin-top: 15px
+      font-size: $font-size-primary
+  .prepayment-click
+    padding: 0 25px
+    text-align: left
+    margin-top: 30px
+  .prepayment-click-here
+    font-weight: bold
+    padding: 0 7px
+    font-size: $font-size-middle
+    &>a:active,a:visited
+      color: $primary-color
+

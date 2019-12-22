@@ -1,0 +1,59 @@
+.bind-userinfo
+  padding: 30px 75px 0
+  margin: 0 auto
+  overflow: hidden
+  .name
+    font-size: 33px
+    color: #4D4D4D
+    margin-top: 30px
+  div.row-height
+    height: $input-height-large
+  .with-arrow
+    display: inline-block
+  .arrow
+    display: inline-block
+    margin: 0 25px 5px 15px
+    border: 8.5px solid #000
+    border-left-color: transparent
+    border-right-color: transparent
+    border-bottom: none
+
+  .agree-check
+    margin-top: 31px
+    height: 33px
+    line-height: 33px
+    .wrapper
+      width: 32px
+      height: 32px
+      box-sizing: border-box
+      border: $border-width-base solid $primary-color
+      border-radius: 4px
+      position: relative
+      bottom: 3px
+      vertical-align: middle
+      display: inline-block
+    .agree
+      display: none
+    .agree[type=checkbox]+span
+      position: absolute
+      display: inline-block
+      width: 6px
+      height: 6px
+      border-radius: 2px
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      transition: all 0.1s
+    .agree[type=checkbox]:checked+span
+      width: 18px
+      height: 18px
+      background: $primary-color
+    a
+      color: $primary-color
+
+  button.btn-margin
+    margin-top: 82px
+
+  .errorMessage
+    margin-top: 5px
+    color: red

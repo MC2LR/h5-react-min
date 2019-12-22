@@ -1,0 +1,1 @@
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9b7c649b026fc8cd&redirect_uri=https://cswcsit.saicgmac.com&response_type=code&scope=snsapi_userinfo &state=123#wechat_redirect

@@ -1,0 +1,36 @@
+.query-new
+  padding: 30px 36px
+  font-size: $font-size-middle
+  .item
+    width: 100%
+    height: $modal-item-height
+    line-height: $modal-item-height
+    margin-top: 30px
+    font-size: $font-size-middle
+    text-align: center
+    box-sizing: border-box
+    border: $border-width-base solid #EDEDED
+    border-radius: 4px
+    ul
+      width: 90%
+      margin: 0 auto
+      li
+        width: fit-content
+        float: left
+        &:first-child
+          width: 25%
+          margin-right: 20px
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+        &:last-child
+          width: 70%
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+  .active
+    border: $border-width-base solid $primary-color
+    color: $primary-color
+  button.btn-margin
+    margin-top: 60px
+  
